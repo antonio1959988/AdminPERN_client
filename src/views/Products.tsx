@@ -6,7 +6,11 @@ import { Product } from "../types";
 // eslint-disable-next-line react-refresh/only-export-components
 export async function loader() {
     const products = await getProducts();
-    return products;
+    if(products !== undefined) {
+        return products;
+    } else {
+        return null;
+    }
 }
 
 export async function action({request}: ActionFunctionArgs) {
