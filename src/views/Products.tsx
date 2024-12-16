@@ -9,7 +9,7 @@ export async function loader() {
     if(products !== undefined) {
         return products;
     } else {
-        return null;
+        return [];
     }
 }
 
